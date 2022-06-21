@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Student Assistant</string>
+    <string name="splash_text">Student Assistant</string>
+    <string name="todo">TODO</string>
+    <string name="skipintro">Skip Intro</string>
+    <string name="fragmentfirstscreentitle">CLASSES</string>
+    <string name="fragmentfirstscreendescription">Always be the first to class with the realtime class reminder feature.</string>
+    <string name="fragmentthirdscreendescription">Making sure you never miss a test is my top priority</string>
+    <string name="fragmentthirdscreentitle">TESTS</string>
+    <string name="fragmentfirstscreennext">NEXT</string>
+    <string name="fragmentsecondscreentitle">ASSIGNMENTS</string>
+    <string name="frragmentsecondscreendescription">Don\'t worry about due dates we\'ve got that covered for you</string>
+    <string name="next">NEXT</string>
+    <string name="finish">FINISH</string>
+    <string name="welcome">WELCOME</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
