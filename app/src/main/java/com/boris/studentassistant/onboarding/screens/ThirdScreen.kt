@@ -17,7 +17,7 @@ class ThirdScreen : Fragment() {
 
     private var _binding: FragmentThirdScreenBinding? = null
     private val binding get() = _binding!!
-    private lateinit var NavController: NavController
+    private lateinit var navController: NavController
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

@@ -30,6 +30,11 @@ class FirstScreen : Fragment() {
 
                  binding.next1.setOnClickListener {
                      viewPager.viewPager?.currentItem = 1
+                     viewPager .viewPager?.apply{
+                         beginFakeDrag()
+                         fakeDragBy(-10f)
+                         endFakeDrag()
+                     }
                  }
         return binding.root
     }

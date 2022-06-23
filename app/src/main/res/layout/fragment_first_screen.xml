@@ -13,7 +13,7 @@
         android:layout_height="250dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:src="@drawable/classreminder"
+        android:src="@drawable/ic_resource_class"
         android:contentDescription="@string/todo" />
 
     <TextView
@@ -43,7 +43,6 @@
         android:text="@string/fragmentfirstscreendescription"
         android:textColor="@color/black"
         android:textSize="18sp" />
-
     <TextView
         android:id="@+id/next1"
         android:layout_width="wrap_content"
@@ -51,12 +50,11 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="false"
         android:layout_marginEnd="60dp"
         android:layout_marginRight="60dp"
         android:layout_marginBottom="60dp"
-        android:fontFamily="@font/brawler_regular"
-        android:text="@string/next"
-        android:textColor="#00796B" />
+        android:text="@string/fragmentfirstscreennext"
+        android:textColor="#00796B"
+        android:textSize="18sp" />
 
 </RelativeLayout>

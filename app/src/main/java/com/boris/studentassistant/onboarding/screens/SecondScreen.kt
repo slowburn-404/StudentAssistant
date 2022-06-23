@@ -29,6 +29,11 @@ class SecondScreen : Fragment() {
 
         binding.next2.setOnClickListener {
             viewPager.viewPager?.currentItem = 2
+            viewPager .viewPager?.apply{
+                beginFakeDrag()
+                fakeDragBy(-10f)
+                endFakeDrag()
+            }
         }
         return binding.root
     }

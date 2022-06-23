@@ -14,7 +14,7 @@
         android:layout_height="250dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:src="@drawable/assignment"
+        android:src="@drawable/ic_reminder"
         android:contentDescription="@string/todo" />
 
     <TextView
