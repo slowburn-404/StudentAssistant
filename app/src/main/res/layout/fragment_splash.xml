@@ -5,16 +5,17 @@
     android:id="@+id/splashframe"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_splash"
-    tools:context=".SplashFragment" >
+    android:background="@color/purple"
+    tools:context=".SplashFragment">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="150dp"
-        android:layout_height="1500dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="80dp"
-        android:src="@drawable/splash_logo"
-        android:contentDescription="@string/todo" />
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:layout_centerInParent="true"
+        android:background="@color/purple"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/ic_students_cap"
+        tools:ignore="ImageContrastCheck" />
+
 </RelativeLayout>

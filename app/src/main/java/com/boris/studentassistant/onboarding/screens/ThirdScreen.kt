@@ -34,10 +34,11 @@ class ThirdScreen : Fragment() {
         return binding.root
     }
 
-    private fun finishOnBoarding(){
-        val sharedPref = requireActivity().getSharedPreferences( "onBoarding", Context.MODE_PRIVATE)
+    private fun finishOnBoarding() {
+        val sharedPref = requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
         val editor = sharedPref.edit()
         editor.putBoolean("Finished", true)
+        editor.apply()
     }
     override fun onDestroyView() {
         super.onDestroyView()

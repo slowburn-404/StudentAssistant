@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentTransaction
+import com.boris.studentassistant.R
 /*import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import com.boris.studentassistant.R*/
@@ -29,11 +31,11 @@ class SecondScreen : Fragment() {
 
         binding.next2.setOnClickListener {
             viewPager.viewPager?.currentItem = 2
-            viewPager .viewPager?.apply{
-                beginFakeDrag()
-                fakeDragBy(-10f)
-                endFakeDrag()
-            }
+            /*val thirdFragment = ThirdScreen()
+            val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
+            transaction.replace(R.id.,thirdFragment)
+            transaction.commit()*/
+
         }
         return binding.root
     }

@@ -54,7 +54,6 @@
         android:layout_marginRight="60dp"
         android:layout_marginBottom="60dp"
         android:text="@string/fragmentfirstscreennext"
-        android:textColor="@color/darkGreen"
         android:textSize="18sp"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="60dp" />

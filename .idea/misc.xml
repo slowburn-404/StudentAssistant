@@ -3,13 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.194" />
+        <entry key="app/src/main/res/drawable/gradient_splash.xml" value="0.1925" />
+        <entry key="app/src/main/res/drawable/ic_exams.xml" value="0.194" />
+        <entry key="app/src/main/res/drawable/ic_late.xml" value="0.194" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.194" />
+        <entry key="app/src/main/res/drawable/ic_log_in.xml" value="0.194" />
+        <entry key="app/src/main/res/drawable/ic_reminder.xml" value="0.194" />
         <entry key="app/src/main/res/drawable/ic_resource_class.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_sign_up.xml" value="0.194" />
+        <entry key="app/src/main/res/drawable/ic_students_cap.xml" value="0.194" />
+        <entry key="app/src/main/res/layout/activity_log_in.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.12681159420289856" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_decision.xml" value="0.12681159420289856" />
         <entry key="app/src/main/res/layout/fragment_first_screen.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.190625" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_second_screen.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.12681159420289856" />
+        <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.16" />
         <entry key="app/src/main/res/layout/fragment_third_screen.xml" value="0.190625" />
         <entry key="app/src/main/res/layout/fragment_view_pager.xml" value="0.2" />
       </map>

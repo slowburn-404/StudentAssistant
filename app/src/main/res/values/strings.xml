@@ -2,7 +2,9 @@
     <string name="app_name">Student Assistant</string>
     <string name="splash_text">Student Assistant</string>
     <string name="todo">TODO</string>
+    <string name="logo">LOGO</string>
     <string name="skipintro">Skip Intro</string>
+    <string name="hello_blank_fragment">HELLO</string>
     <string name="fragmentfirstscreentitle">CLASSES</string>
     <string name="fragmentfirstscreendescription">Going about classroom activities should be hassle free.</string>
     <string name="fragmentthirdscreendescription">Stay on top of your tests.</string>
@@ -14,5 +16,15 @@
     <string name="finish">FINISH</string>
     <string name="welcome">WELCOME</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="intro_title">STUDENT ASSISTANT</string>
+    <string name="intro_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+    <string name="intro_register">REGISTER</string>>
+    <string name="intro_login">LOG IN</string>
+    <string name="or">OR</string>
+    <string name="email_hint">Enter Email</string>
+    <string name="forgot_password">FORGOT PASSWORD?</string>
+    <string name="password_hint">Enter Password</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="confirm_password">Confirm Password</string>
+
 </resources>

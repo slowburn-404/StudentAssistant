@@ -1,5 +1,6 @@
 package com.boris.studentassistant
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -17,6 +18,19 @@ class HomeFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
+
+        binding.btRegister.setOnClickListener{
+            requireActivity().run{
+                startActivity(Intent(this, SignUpActivity::class.java))
+                finish()
+            }
+        }
+        binding.btLogIn.setOnClickListener {
+            requireActivity().run{
+                startActivity(Intent(this, LogInActivity::class.java))
+                finish()
+            }
+        }
 
         return binding.root
     }

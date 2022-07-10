@@ -10,8 +10,8 @@ android {
         targetSdkVersion 32
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        android.defaultConfig.vectorDrawables.useSupportLibrary = true
     }
 
     buildTypes {
@@ -24,9 +24,13 @@ android {
         viewBinding = true
     }
     repositories(){
+        google()
         mavenCentral()
     }
     namespace 'com.boris.studentassistant'
+    lintOptions{
+        abortOnError false
+    }
 }
 
 dependencies {
