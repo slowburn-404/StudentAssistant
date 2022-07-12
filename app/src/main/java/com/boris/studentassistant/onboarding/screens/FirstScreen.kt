@@ -5,9 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.FragmentTransaction
-import androidx.navigation.fragment.findNavController
-import com.boris.studentassistant.R
+//import androidx.fragment.app.FragmentTransaction
+//import androidx.navigation.fragment.findNavController
+//import com.boris.studentassistant.R
 /*import androidx.fragment.app.activityViewModels
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
@@ -32,11 +32,7 @@ class FirstScreen : Fragment() {
         val viewPager = FragmentViewPagerBinding.inflate(inflater, container, false)
 
                  binding.next1.setOnClickListener {
-                     viewPager.viewPager?.currentItem = 1
-                     val secondFragment = SecondScreen()
-                     val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
-                     transaction.replace(R.id.secondscreen1,secondFragment)
-                     transaction.commit()
+                     viewPager.viewPager.currentItem = 1
 
                  }
         return binding.root

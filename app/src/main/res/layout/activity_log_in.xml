@@ -27,7 +27,6 @@
         android:layout_marginStart="42dp"
         android:layout_marginLeft="42dp"
         android:text="@string/intro_login"
-        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold" />
 

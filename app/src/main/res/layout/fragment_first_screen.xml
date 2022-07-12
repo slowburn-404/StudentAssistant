@@ -41,6 +41,7 @@
         android:gravity="center"
         android:text="@string/fragmentfirstscreendescription"
         android:textSize="18sp" />
+
     <TextView
         android:id="@+id/next1"
         android:layout_width="wrap_content"
@@ -52,7 +53,7 @@
         android:layout_marginRight="60dp"
         android:layout_marginBottom="60dp"
         android:text="@string/fragmentfirstscreennext"
-        android:textColor="#00796B"
+        android:textColor="@color/md_theme_light_primary"
         android:textSize="18sp" />
 
 </RelativeLayout>
