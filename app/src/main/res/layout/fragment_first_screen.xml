@@ -55,5 +55,9 @@
         android:text="@string/fragmentfirstscreennext"
         android:textColor="@color/md_theme_light_primary"
         android:textSize="18sp" />
+    <!--<include
+        android:id="@+id/viewPager2"
+        layout="@layout/fragment_view_pager"
+        />-->
 
 </RelativeLayout>

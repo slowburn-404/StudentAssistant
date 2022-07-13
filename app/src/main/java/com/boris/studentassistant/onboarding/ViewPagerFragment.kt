@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.viewpager2.widget.ViewPager2
 import com.boris.studentassistant.onboarding.screens.FirstScreen
 import com.boris.studentassistant.onboarding.screens.SecondScreen
 import com.boris.studentassistant.onboarding.screens.ThirdScreen
