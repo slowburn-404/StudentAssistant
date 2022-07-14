@@ -124,13 +124,23 @@
         android:layout_below="@id/textInputLayoutConfirmPassword"
         android:layout_marginStart="42dp"
         android:layout_marginLeft="42dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="42dp"
         android:layout_marginRight="42dp"
         android:text="@string/sign_up"
         android:textSize="14sp"
         android:textStyle="bold"
         tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <TextView
+        android:id="@+id/textLogIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_sign_up"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/redirect_login_page"
+        android:textStyle="bold" />
 
 
 </RelativeLayout>

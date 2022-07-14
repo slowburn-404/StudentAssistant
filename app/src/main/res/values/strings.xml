@@ -29,7 +29,9 @@
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
+    <string name="redirect_login_page">Already have and Account? Log In</string>
+    <string name="redirect_signup_page">No account? Register</string>
+    <string name="type_message">Type message...</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
