@@ -23,28 +23,28 @@ class LogInActivity : AppCompatActivity() {
 
         sAuth = FirebaseAuth.getInstance()
 
-        //fetch user entry
-        val email = binding.textInputEditTextEmailLogIn.text.toString()
-        val passwd = binding.textInputEditTextPasswordLogIn.text.toString()
-
         //sign in user when button is tapped
         binding.btLogInPage.setOnClickListener {
-                userLogIn(email, passwd)
+            //fetch user entry
+            val email = binding.textInputEditTextEmailLogIn.text.toString()
+            val passwd = binding.textInputEditTextPasswordLogIn.text.toString()
+
+            studentLogIn(email, passwd)
         }
         binding.textSignUp.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
-            startActivity(intent)
             finish()
+            startActivity(intent)
         }
     }
-    private fun userLogIn(email: String, passwd: String){
-
+    private fun studentLogIn(email: String, passwd: String){
         //check for empty fields
         if (email.isNotEmpty() && passwd.isNotEmpty()) {
             sAuth.signInWithEmailAndPassword(email, passwd).addOnCompleteListener {
                 if (it.isSuccessful) {
                     //open main activity once auth is successful
-                    val intent = Intent(this, MainActivity::class.java)
+                    val intent = Intent(this, ChatActivity::class.java)
+                    finish()
                     startActivity(intent)
                 } else {
                     Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()

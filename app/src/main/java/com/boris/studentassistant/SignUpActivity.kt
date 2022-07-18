@@ -8,7 +8,7 @@ import com.boris.studentassistant.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.firestore.auth.User
+import com.boris.studentassistant.models.User
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -75,7 +75,7 @@ class SignUpActivity : AppCompatActivity() {
     private fun addUserToDB(email: String, uid: String){
         sADBRef = FirebaseDatabase.getInstance().reference
 
-        sADBRef.child("Students").child(uid).setValue(User(email, uid))
+        sADBRef.child("Students").child(uid).setValue(User(email,uid))
 
     }
 }

@@ -7,6 +7,7 @@
         <entry key="app/src/main/res/drawable/bg_receive_message.xml" value="0.197" />
         <entry key="app/src/main/res/drawable/bg_send_message.xml" value="0.197" />
         <entry key="app/src/main/res/drawable/gradient_splash.xml" value="0.1925" />
+        <entry key="app/src/main/res/drawable/ic_baseline_send_24.xml" value="0.198" />
         <entry key="app/src/main/res/drawable/ic_exams.xml" value="0.194" />
         <entry key="app/src/main/res/drawable/ic_late.xml" value="0.194" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.194" />
@@ -15,10 +16,11 @@
         <entry key="app/src/main/res/drawable/ic_resource_class.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_sign_up.xml" value="0.194" />
         <entry key="app/src/main/res/drawable/ic_students_cap.xml" value="0.194" />
+        <entry key="app/src/main/res/layout/activity_chat.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_log_in.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.12681159420289856" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_chat.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_chat.xml" value="0.15" />
         <entry key="app/src/main/res/layout/fragment_decision.xml" value="0.12681159420289856" />
         <entry key="app/src/main/res/layout/fragment_first_screen.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
@@ -28,6 +30,7 @@
         <entry key="app/src/main/res/layout/fragment_third_screen.xml" value="0.190625" />
         <entry key="app/src/main/res/layout/fragment_view_pager.xml" value="0.2" />
         <entry key="app/src/main/res/layout/messages.xml" value="0.25" />
+        <entry key="app/src/main/res/menu/menu.xml" value="0.1890625" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.198" />
       </map>
     </option>
