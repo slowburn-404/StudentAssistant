@@ -10,6 +10,7 @@ import com.boris.studentassistant.onboarding.screens.FirstScreen
 import com.boris.studentassistant.onboarding.screens.SecondScreen
 import com.boris.studentassistant.onboarding.screens.ThirdScreen
 import com.boris.studentassistant.databinding.FragmentViewPagerBinding
+import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
 
 
 class ViewPagerFragment : Fragment() {
@@ -22,6 +23,7 @@ class ViewPagerFragment : Fragment() {
             // Inflate the layout for this fragment
             _binding = FragmentViewPagerBinding.inflate(inflater, container, false)
 
+            //add screens to this array
             val fragmentList = arrayListOf(
                 FirstScreen(),
                 SecondScreen(),
@@ -33,7 +35,11 @@ class ViewPagerFragment : Fragment() {
                 requireActivity().supportFragmentManager,
                 lifecycle
             )
-            binding.viewPager.adapter = adapter
+
+            val wormDotsIndicator: WormDotsIndicator = binding.wormDotsIndicator
+            val viewPager2: ViewPager2 = binding.viewPager
+            viewPager2.adapter = adapter
+            wormDotsIndicator.attachTo(viewPager2)
 
             return binding.root
 
