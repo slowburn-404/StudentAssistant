@@ -75,6 +75,8 @@ dependencies {
     implementation 'com.google.auth:google-auth-library-oauth2-http:1.7.0'
     //coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1")
+    //dotsindicator
+    implementation("com.tbuonomo:dotsindicator:4.3")
 
 
 }

@@ -16,7 +16,7 @@
         <entry key="app/src/main/res/drawable/ic_resource_class.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_sign_up.xml" value="0.194" />
         <entry key="app/src/main/res/drawable/ic_students_cap.xml" value="0.194" />
-        <entry key="app/src/main/res/layout/activity_chat.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_chat.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_log_in.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.12681159420289856" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
@@ -29,7 +29,7 @@
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.16" />
         <entry key="app/src/main/res/layout/fragment_third_screen.xml" value="0.190625" />
         <entry key="app/src/main/res/layout/fragment_view_pager.xml" value="0.2" />
-        <entry key="app/src/main/res/layout/messages.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/messages.xml" value="0.33" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.1890625" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.198" />
       </map>

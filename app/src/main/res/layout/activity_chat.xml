@@ -9,8 +9,9 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecyclerViewChat"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_above="@id/sendMessageBar"
+        android:fadeScrollbars="true"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:stackFromEnd="true"
@@ -46,18 +47,14 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <ImageButton
             android:id="@+id/floatingActionButtonSendMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_margin="10dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="15dp"
+            android:layout_toEndOf="@id/textInputLayoutTypeMessage"
             android:src="@drawable/ic_baseline_send_24"
-            app:backgroundTint="@color/md_theme_light_primary"
+            android:backgroundTint="@color/md_theme_light_onPrimary"
             tools:ignore="SpeakableTextPresentCheck" />
     </RelativeLayout>
 

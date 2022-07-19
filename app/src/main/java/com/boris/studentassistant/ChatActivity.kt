@@ -125,7 +125,7 @@ class ChatActivity : AppCompatActivity() {
         if(botReply.isNotEmpty()){
             addMessageToList(botReply, true)
         } else{
-            Toast.makeText(this, "Kuna shida mahali", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
         }
     }
 

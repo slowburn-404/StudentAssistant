@@ -43,7 +43,7 @@
         android:text="@string/frragmentsecondscreendescription"
         android:textSize="18sp" />
 
-    <TextView
+    <!--<TextView
         android:id="@+id/next2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
         android:textColor="@color/md_theme_light_primary"
         android:textSize="18sp" />
 
-    <!--<include
+    <include
         android:id="@+id/viewPager2"
         layout="@layout/fragment_view_pager" />-->
 

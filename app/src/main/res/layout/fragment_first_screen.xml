@@ -42,7 +42,7 @@
         android:text="@string/fragmentfirstscreendescription"
         android:textSize="18sp" />
 
-    <TextView
+    <!--<TextView
         android:id="@+id/next1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
         android:text="@string/fragmentfirstscreennext"
         android:textColor="@color/md_theme_light_primary"
         android:textSize="18sp" />
-    <!--<include
+        <include
         android:id="@+id/viewPager2"
         layout="@layout/fragment_view_pager"
         />-->
