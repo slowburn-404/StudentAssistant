@@ -10,8 +10,8 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.Toast
 import com.boris.studentassistant.adapters.MessageAdapter
-import com.boris.studentassistant.models.Message
 import com.boris.studentassistant.databinding.ActivityChatBinding
+import com.boris.studentassistant.models.Message
 import com.google.api.gax.core.FixedCredentialsProvider
 import com.google.auth.oauth2.GoogleCredentials
 import com.google.auth.oauth2.ServiceAccountCredentials

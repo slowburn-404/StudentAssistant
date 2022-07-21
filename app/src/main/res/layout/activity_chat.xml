@@ -15,7 +15,7 @@
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:stackFromEnd="true"
-        tools:itemCount="2"
+        tools:itemCount="1"
         tools:listitem="@layout/messages">
 
     </androidx.recyclerview.widget.RecyclerView>
