@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:id="@+id/layout_receive"
@@ -9,24 +11,19 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
         android:padding="8dp"
         android:background="@drawable/bg_receive_message"
         android:gravity="center">
-
         <TextView
             android:id="@+id/textReceiveMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
-            android:layout_marginTop="10dp"
             android:layout_marginEnd="25dp"
-            android:layout_marginBottom="10dp"
             android:padding="5dp"
             android:textColor="@color/md_theme_light_onPrimary"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -36,25 +33,19 @@
         android:layout_below="@id/layout_receive"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
         android:padding="8dp"
         android:background="@drawable/bg_send_message"
-        android:gravity="center">
+        android:gravity="right">
 
         <TextView
             android:id="@+id/textSendMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
-            android:layout_marginTop="10dp"
             android:layout_marginEnd="25dp"
-            android:layout_marginBottom="10dp"
             android:padding="5dp"
             android:textColor="@color/md_theme_light_onPrimary"
-            android:textSize="14sp">
-
-        </TextView>
+            android:textSize="16sp"/>
     </RelativeLayout>
-</RelativeLayout>
+</LinearLayout>
