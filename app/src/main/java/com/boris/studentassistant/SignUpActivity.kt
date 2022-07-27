@@ -32,10 +32,11 @@ class SignUpActivity : AppCompatActivity() {
         binding.btSignUp.setOnClickListener {
             //fetch user input
             val email = binding.textInputEditTextEmail.text.toString()
-            val passwd = binding.textInputEditTextPassword.text.toString()
-            val confirmpasswd = binding.textInputEditTextConfirmPassword.text.toString()
+            val passwd = binding.textInputEditTextPassword.text.toString().trim()
+            val confirmpasswd = binding.textInputEditTextConfirmPassword.text.toString().trim()
+            val username = binding.textInputEditTextUsername.text.toString().trim()
 
-            userSignUP(email, passwd, confirmpasswd)
+            userSignUP(email, passwd, confirmpasswd, username)
         }
         binding.textLogIn.setOnClickListener {
             val intent = Intent(this, LogInActivity::class.java)
@@ -43,7 +44,7 @@ class SignUpActivity : AppCompatActivity() {
             finish()
         }
     }
-    private fun userSignUP(email: String, passwd: String, confirmpasswd: String){
+    private fun userSignUP(email: String, passwd: String, confirmpasswd: String, username: String){
         //check if fields are empty
         if(email.isNotEmpty() && passwd.isNotEmpty() && confirmpasswd.isNotEmpty()){
             //check if passwords match
@@ -51,7 +52,7 @@ class SignUpActivity : AppCompatActivity() {
                 sAuth.createUserWithEmailAndPassword(email, passwd).addOnCompleteListener {
                     if (it.isSuccessful){
                         //add user to database
-                        addUserToDB(email, sAuth.currentUser?.uid!!)
+                        addUserToDB(email, sAuth.currentUser?.uid!!, username)
 
                         Toast.makeText(this, "Account created successfully", Toast.LENGTH_SHORT).show()
                         //move to log in activity if signup is successful
@@ -59,7 +60,7 @@ class SignUpActivity : AppCompatActivity() {
                         startActivity(intent)
                         finish()
                     }else{
-                        Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, it.exception.toString(), Toast.LENGTH_LONG).show()
                     }
                 }
             } else{
@@ -72,10 +73,10 @@ class SignUpActivity : AppCompatActivity() {
 
     }
 
-    private fun addUserToDB(email: String, uid: String){
+    private fun addUserToDB(email: String, uid: String, username: String){
         sADBRef = FirebaseDatabase.getInstance().reference
 
-        sADBRef.child("Students").child(uid).setValue(User(email,uid))
+        sADBRef.child("Students").child(uid).setValue(User(email,uid,username))
 
     }
 }

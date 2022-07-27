@@ -30,14 +30,18 @@ class ViewPagerFragment : Fragment() {
                 ThirdScreen()
             )
 
+            //add screens to adapter
             val adapter = ViewPagerAdapter(
                 fragmentList,
                 requireActivity().supportFragmentManager,
                 lifecycle
             )
 
+            //reference dot indicator
             val wormDotsIndicator: WormDotsIndicator = binding.wormDotsIndicator
+            //reference viewpager2
             val viewPager2: ViewPager2 = binding.viewPager
+            //set adapter
             viewPager2.adapter = adapter
             wormDotsIndicator.attachTo(viewPager2)
 

@@ -17,7 +17,7 @@
     <string name="welcome">WELCOME</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="intro_title">STUDENT ASSISTANT</string>
-    <string name="intro_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+    <string name="place_holder">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
     <string name="intro_register">REGISTER</string>>
     <string name="intro_login">LOG IN</string>
     <string name="or">OR</string>
@@ -26,17 +26,17 @@
     <string name="password_hint">Enter Password</string>
     <string name="sign_up">SIGN UP</string>
     <string name="confirm_password">Confirm Password</string>
-    <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
-    <string name="redirect_login_page">Already have and Account? Log In</string>
+    <string name="redirect_login_page">Log In</string>
     <string name="redirect_signup_page">No account? Register</string>
-    <string name="type_message">Type message...</string>
+    <string name="type_message">Type your message...</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="log_out">Log Out</string>
     <string name="exit">Exit</string>
+    <string name="hint_username">Enter Username</string>
 
 </resources>

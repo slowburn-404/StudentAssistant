@@ -57,7 +57,7 @@ class ChatActivity : AppCompatActivity() {
 
             //update list and call dialogflow
             binding.floatingActionButtonSendMessage.setOnClickListener {
-                val message = binding.textInputEditTextTypeMessage.text.toString()
+                val message = binding.textInputEditTextTypeMessage.text.toString().trim()
 
                 if(message.isNotEmpty()){
                     addMessageToList(message, false)
@@ -135,6 +135,7 @@ class ChatActivity : AppCompatActivity() {
         return super.onCreateOptionsMenu(menu)
     }
 
+    //kebab menu
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item.itemId) {
          R.id.log_out -> {
@@ -145,6 +146,7 @@ class ChatActivity : AppCompatActivity() {
              startActivity(intent)
              true
          }
+            //exit app
             R.id.exit_app -> {
                 finish()
                 true
