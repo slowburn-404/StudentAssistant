@@ -106,6 +106,14 @@
         android:layout_marginTop="10dp"
         android:text="@string/redirect_signup_page"
         android:textStyle="bold" />
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/circular_progress_bar"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        app:indicatorColor="@color/md_theme_light_primary"
+        app:hideAnimationBehavior="none"/>
 
 
 </RelativeLayout>

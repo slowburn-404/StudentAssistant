@@ -3,6 +3,7 @@ package com.boris.studentassistant
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.boris.studentassistant.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -18,6 +19,14 @@ class SignUpActivity : AppCompatActivity() {
 
     private lateinit var sADBRef: DatabaseReference
 
+    override fun onResume() {
+        super.onResume()
+            //dropdown
+            val roles = resources.getStringArray(R.array.roles)
+            val arrayAdapter = ArrayAdapter(this, R.layout.roles_dropdown, roles)
+            binding.autoCompleteTextViewRole.setAdapter(arrayAdapter)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
@@ -31,7 +40,7 @@ class SignUpActivity : AppCompatActivity() {
         //perform signup on button tap
         binding.btSignUp.setOnClickListener {
             //fetch user input
-            val email = binding.textInputEditTextEmail.text.toString()
+            val email = binding.textInputEditTextEmail.text.toString().trim()
             val passwd = binding.textInputEditTextPassword.text.toString().trim()
             val confirmpasswd = binding.textInputEditTextConfirmPassword.text.toString().trim()
             val username = binding.textInputEditTextUsername.text.toString().trim()
@@ -76,7 +85,12 @@ class SignUpActivity : AppCompatActivity() {
     private fun addUserToDB(email: String, uid: String, username: String){
         sADBRef = FirebaseDatabase.getInstance().reference
 
-        sADBRef.child("Students").child(uid).setValue(User(email,uid,username))
+        val role = binding.autoCompleteTextViewRole.text.toString()
 
+        if(role == "Student"){
+            sADBRef.child("Students").child(uid).setValue(User(email,uid,username))
+        }else{
+            sADBRef.child("Lecturers").child(uid).setValue(User(email,uid,username))
+        }
     }
 }

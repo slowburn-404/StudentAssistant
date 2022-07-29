@@ -19,7 +19,11 @@ class LogInActivity : AppCompatActivity() {
         binding = ActivityLogInBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //hide actionbar
         supportActionBar?.hide()
+
+        //hide progress bar
+        binding.circularProgressBar.hide()
 
         sAuth = FirebaseAuth.getInstance()
 
@@ -28,6 +32,8 @@ class LogInActivity : AppCompatActivity() {
             //fetch user entry
             val email = binding.textInputEditTextEmailLogIn.text.toString()
             val passwd = binding.textInputEditTextPasswordLogIn.text.toString()
+
+            binding.circularProgressBar.show()
 
             studentLogIn(email, passwd)
         }
@@ -42,16 +48,18 @@ class LogInActivity : AppCompatActivity() {
         if (email.isNotEmpty() && passwd.isNotEmpty()) {
             sAuth.signInWithEmailAndPassword(email, passwd).addOnCompleteListener {
                 if (it.isSuccessful) {
-                    //open main activity once auth is successful
+                    //open chat activity once auth is successful
                     val intent = Intent(this, ChatActivity::class.java)
                     finish()
                     startActivity(intent)
                 } else {
-                    Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, it.exception.toString(), Toast.LENGTH_LONG).show()
+                    binding.circularProgressBar.hide()
                 }
             }
         } else {
             Toast.makeText(this, "Email and Password cannot be empty.", Toast.LENGTH_SHORT).show()
+            binding.circularProgressBar.hide()
         }
     }
 

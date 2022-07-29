@@ -12,7 +12,6 @@
     <string name="fragmentfirstscreennext">NEXT</string>
     <string name="fragmentsecondscreentitle">REMINDERS</string>
     <string name="frragmentsecondscreendescription">Don\'t worry about due dates I\'ve got that covered for you.</string>
-    <string name="next">NEXT</string>
     <string name="finish">FINISH</string>
     <string name="welcome">WELCOME</string>
     <!-- TODO: Remove or change this placeholder text -->
@@ -28,7 +27,7 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
-    <string name="redirect_login_page">Log In</string>
+    <string name="redirect_login_page">Log In Instead</string>
     <string name="redirect_signup_page">No account? Register</string>
     <string name="type_message">Type your message...</string>
     <string name="action_sign_in_short">Sign in</string>
@@ -38,5 +37,11 @@
     <string name="log_out">Log Out</string>
     <string name="exit">Exit</string>
     <string name="hint_username">Enter Username</string>
+    <string name="role">Select Role</string>
+    <string-array name="roles">
+        <item>Student</item>
+        <item>Lecturer</item>
+    </string-array>
+
 
 </resources>
