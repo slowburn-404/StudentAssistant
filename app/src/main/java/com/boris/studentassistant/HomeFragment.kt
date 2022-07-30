@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.boris.studentassistant.databinding.FragmentHomeBinding
+import com.boris.studentassistant.logins.LogInActivity
+import com.boris.studentassistant.logins.SignUpActivity
 
 
 class HomeFragment : Fragment() {

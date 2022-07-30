@@ -1,10 +1,11 @@
-package com.boris.studentassistant
+package com.boris.studentassistant.logins
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import com.boris.studentassistant.R
 import com.boris.studentassistant.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference

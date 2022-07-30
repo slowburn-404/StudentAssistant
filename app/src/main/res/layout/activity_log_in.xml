@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LogInActivity">
+    tools:context=".logins.LogInActivity">
 
     <ImageView
         android:id="@+id/log_in_page_header"
@@ -12,10 +12,9 @@
         android:layout_height="250dp"
         android:layout_alignParentTop="false"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="42dp"
+        android:layout_marginStart="42dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="42dp"
-        android:layout_marginRight="42dp"
         android:contentDescription="@string/todo"
         app:srcCompat="@drawable/ic_log_in" />
 
@@ -37,16 +36,13 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/login_heading"
         android:layout_marginStart="42dp"
-        android:layout_marginLeft="42dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="42dp"
-        android:layout_marginRight="42dp"
         android:hint="@string/email_hint"
         app:boxCornerRadiusBottomEnd="50dp"
         app:boxCornerRadiusBottomStart="50dp"
         app:boxCornerRadiusTopEnd="50dp"
         app:boxCornerRadiusTopStart="50dp"
-        app:counterEnabled="true"
         app:startIconDrawable="@drawable/ic_email">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -63,16 +59,13 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/textInputLayoutEmailLogIn"
         android:layout_marginStart="42dp"
-        android:layout_marginLeft="42dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="42dp"
-        android:layout_marginRight="42dp"
         android:hint="@string/password_hint"
         app:boxCornerRadiusBottomEnd="50dp"
         app:boxCornerRadiusBottomStart="50dp"
         app:boxCornerRadiusTopEnd="50dp"
         app:boxCornerRadiusTopStart="50dp"
-        app:counterEnabled="true"
         app:endIconMode="password_toggle"
         app:startIconDrawable="@drawable/ic_lock">
 
@@ -83,15 +76,40 @@
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/textInputLayoutPasswordLogin"
+        android:id="@+id/login_linear_layout"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginTop="5dp">
+
+        <CheckBox
+            android:id="@+id/login_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remember_me" />
+
+        <TextView
+            android:id="@+id/textview_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:text="@string/forgot_password"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
     <Button
         android:id="@+id/bt_log_in_page"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_below="@id/textInputLayoutPasswordLogin"
+        android:layout_below="@id/login_linear_layout"
         android:layout_marginStart="42dp"
-        android:layout_marginLeft="42dp"
         android:layout_marginEnd="42dp"
-        android:layout_marginRight="42dp"
+        android:layout_marginTop="10dp"
         android:text="@string/intro_login"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -114,6 +132,5 @@
         android:indeterminate="true"
         app:indicatorColor="@color/md_theme_light_primary"
         app:hideAnimationBehavior="none"/>
-
 
 </RelativeLayout>

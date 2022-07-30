@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="WRITE_SECURE_SETTINGS"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="WRITE_SECURE_SETTINGS" />
 
     <application
         android:allowBackup="true"
@@ -12,13 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".logins.PasswordResetActivity"
+            android:exported="false" />
+        <activity
             android:name=".ChatActivity"
             android:exported="false" />
         <activity
-            android:name=".LogInActivity"
+            android:name=".logins.LogInActivity"
             android:exported="false" />
         <activity
-            android:name=".SignUpActivity"
+            android:name=".logins.SignUpActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

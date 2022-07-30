@@ -1,12 +1,12 @@
-package com.boris.studentassistant
+package com.boris.studentassistant.logins
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.boris.studentassistant.ChatActivity
 import com.boris.studentassistant.databinding.ActivityLogInBinding
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.ktx.Firebase
 
 class LogInActivity : AppCompatActivity() {
 
@@ -27,11 +27,18 @@ class LogInActivity : AppCompatActivity() {
 
         sAuth = FirebaseAuth.getInstance()
 
+        //password reset
+        binding.textviewForgotPassword.setOnClickListener {
+            val intent = Intent(this, PasswordResetActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
         //sign in user when button is tapped
         binding.btLogInPage.setOnClickListener {
             //fetch user entry
-            val email = binding.textInputEditTextEmailLogIn.text.toString()
-            val passwd = binding.textInputEditTextPasswordLogIn.text.toString()
+            val email = binding.textInputEditTextEmailLogIn.text.toString().trim()
+            val passwd = binding.textInputEditTextPasswordLogIn.text.toString().trim()
 
             binding.circularProgressBar.show()
 

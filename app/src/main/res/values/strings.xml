@@ -21,7 +21,7 @@
     <string name="intro_login">LOG IN</string>
     <string name="or">OR</string>
     <string name="email_hint">Enter Email</string>
-    <string name="forgot_password">FORGOT PASSWORD?</string>
+    <string name="forgot_password">Forgot Password?</string>
     <string name="password_hint">Enter Password</string>
     <string name="sign_up">SIGN UP</string>
     <string name="confirm_password">Confirm Password</string>
@@ -37,6 +37,12 @@
     <string name="log_out">Log Out</string>
     <string name="exit">Exit</string>
     <string name="hint_username">Enter Username</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="password_reset">Password Reset</string>
+    <string name="submit">SUBMIT</string>
+    <string name="instructions">An email has been sent to you with instructions on how to reset your password.</string>
+    <string name="sent">SENT!</string>
+    <string name="check_email">Check your Email for instructions.</string>
     <string name="role">Select Role</string>
     <string-array name="roles">
         <item>Student</item>
