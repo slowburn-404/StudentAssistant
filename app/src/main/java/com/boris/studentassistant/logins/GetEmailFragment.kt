@@ -32,15 +32,16 @@ class GetEmailFragment : Fragment() {
         sAuth = FirebaseAuth.getInstance()
 
         binding.submitEmail.setOnClickListener {
-            var email = binding.textInputEditTextGetEmail.text.toString().trim()
-            if(email.isNotEmpty()){
+            val email = binding.textInputEditTextGetEmail.text.toString().trim()
+            if(email.isNotEmpty() && sAuth.currentUser == null){
                 binding.circularProgressBar.show()
-                sAuth.sendPasswordResetEmail(email).addOnCompleteListener { task ->
-                    if(task.isSuccessful){
+
+                sAuth.sendPasswordResetEmail(email).addOnCompleteListener {
+                    if(it.isSuccessful){
                         findNavController().navigate(R.id.action_getEmailFragment_to_emailSentFragment2)
                     }else{
                         binding.circularProgressBar.hide()
-                        Toast.makeText(requireContext(), task.exception.toString(), Toast.LENGTH_LONG).show()
+                        Toast.makeText(requireContext(), it.exception?.message.toString(), Toast.LENGTH_LONG).show()
                     }
                 }
             }else{

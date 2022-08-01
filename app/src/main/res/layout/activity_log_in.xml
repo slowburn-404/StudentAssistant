@@ -75,38 +75,23 @@
             android:layout_height="wrap_content"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@id/textInputLayoutPasswordLogin"
-        android:id="@+id/login_linear_layout"
-        android:layout_marginStart="42dp"
-        android:layout_marginEnd="42dp"
-        android:layout_marginTop="5dp">
-
-        <CheckBox
-            android:id="@+id/login_checkbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/remember_me" />
-
         <TextView
             android:id="@+id/textview_forgot_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/textInputLayoutPasswordLogin"
+            android:layout_alignParentEnd="true"
             android:layout_marginStart="50dp"
+            android:layout_marginEnd="42dp"
+            android:layout_marginTop="10dp"
             android:text="@string/forgot_password"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-
+            android:textStyle="bold"
+            android:textSize="16sp"/>
     <Button
         android:id="@+id/bt_log_in_page"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_below="@id/login_linear_layout"
+        android:layout_below="@id/textview_forgot_password"
         android:layout_marginStart="42dp"
         android:layout_marginEnd="42dp"
         android:layout_marginTop="10dp"
@@ -123,7 +108,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:text="@string/redirect_signup_page"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textSize="16sp"/>
     <com.google.android.material.progressindicator.CircularProgressIndicator
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
