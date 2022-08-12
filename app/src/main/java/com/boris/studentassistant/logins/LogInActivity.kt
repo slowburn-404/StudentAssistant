@@ -4,8 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.boris.studentassistant.ChatActivity
 import com.boris.studentassistant.databinding.ActivityLogInBinding
+import com.boris.studentassistant.studentDashboard.DashboardActivity
 import com.google.firebase.auth.FirebaseAuth
 
 class LogInActivity : AppCompatActivity() {
@@ -56,7 +56,7 @@ class LogInActivity : AppCompatActivity() {
             sAuth.signInWithEmailAndPassword(email, passwd).addOnCompleteListener {
                 if (it.isSuccessful) {
                     //open chat activity once auth is successful
-                    val intent = Intent(this, ChatActivity::class.java)
+                    val intent = Intent(this, DashboardActivity::class.java)
                     finish()
                     startActivity(intent)
                 } else {

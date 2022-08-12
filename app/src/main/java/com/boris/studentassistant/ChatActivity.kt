@@ -80,6 +80,7 @@ class ChatActivity : AppCompatActivity() {
         binding.RecyclerViewChat.layoutManager?.scrollToPosition(messageList.size - 1)
     }
 
+    //connect to dialogflow api
     private fun initializeBot(){
         try{
             val stream = this.resources.openRawResource(R.raw.credentials)

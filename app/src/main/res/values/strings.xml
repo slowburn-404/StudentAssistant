@@ -16,7 +16,7 @@
     <string name="welcome">WELCOME</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="intro_title">STUDENT ASSISTANT</string>
-    <string name="place_holder">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+    <string name="place_holder">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
     <string name="intro_register">REGISTER</string>>
     <string name="intro_login">LOG IN</string>
     <string name="or">OR</string>

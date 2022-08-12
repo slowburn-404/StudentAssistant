@@ -18,11 +18,12 @@
         <entry key="app/src/main/res/drawable/ic_sign_up.xml" value="0.194" />
         <entry key="app/src/main/res/drawable/ic_students_cap.xml" value="0.194" />
         <entry key="app/src/main/res/layout/activity_chat.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_log_in.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.12681159420289856" />
         <entry key="app/src/main/res/layout/activity_password_reset.xml" value="0.19010416666666666" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/dashboard_cards.xml" value="0.17074275362318841" />
         <entry key="app/src/main/res/layout/fragment_chat.xml" value="0.15" />
         <entry key="app/src/main/res/layout/fragment_decision.xml" value="0.12681159420289856" />
         <entry key="app/src/main/res/layout/fragment_email_sent.xml" value="0.21" />

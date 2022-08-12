@@ -12,6 +12,7 @@ import android.view.ViewGroup
 import android.widget.RelativeLayout
 import androidx.navigation.fragment.findNavController
 import com.boris.studentassistant.databinding.FragmentSplashBinding
+import com.boris.studentassistant.studentDashboard.DashboardActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.ktx.Firebase
 
@@ -36,7 +37,7 @@ class SplashFragment : Fragment() {
             if (finishedOnBoarding()){
                 if(user != null){
                     requireActivity().run{
-                        startActivity(Intent(this, ChatActivity::class.java))
+                        startActivity(Intent(this, DashboardActivity::class.java))
                         finish()}
                 }else{
                     findNavController().navigate(R.id.action_splashFragment_to_homeFragment)

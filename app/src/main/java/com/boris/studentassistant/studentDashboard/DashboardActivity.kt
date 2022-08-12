@@ -1,7 +1,9 @@
 package com.boris.studentassistant.studentDashboard
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.boris.studentassistant.ChatActivity
 import com.boris.studentassistant.R
 import com.boris.studentassistant.databinding.ActivityDashboardBinding
 
@@ -16,5 +18,10 @@ class DashboardActivity : AppCompatActivity() {
 
         //
         binding.dashboardToolbar.setTitle(R.string.app_name)
+
+        binding.dashboardFloatingactionbutton.setOnClickListener {
+            val intent = Intent(this, ChatActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
