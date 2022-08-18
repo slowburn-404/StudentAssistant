@@ -1,66 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".ChatActivity">
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:id="@+id/chat_coordinatorlayout"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
+        android:backgroundTint="@android:color/white"
+        app:layout_scrollFlags="scroll|enterAlways|snap">
 
-        <com.google.android.material.appbar.AppBarLayout
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            style="?attr/collapsingToolbarLayoutMediumStyle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fitsSystemWindows="true"
-            app:layout_scrollFlags="scroll|enterAlways|snap">
+            android:layout_height="?attr/collapsingToolbarLayoutMediumSize">
 
-            <com.google.android.material.appbar.CollapsingToolbarLayout
-                style="?attr/collapsingToolbarLayoutMediumStyle"
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/chat_toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/collapsingToolbarLayoutMediumSize">
-                <com.google.android.material.appbar.MaterialToolbar
-                    android:id="@+id/chat_toolbar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:elevation="0dp"
-                    app:layout_collapseMode="pin"
-                    app:layout_scrollFlags="scroll|enterAlways|snap"
-                    app:menu="@menu/chat_menu"
-                    app:navigationIcon="@drawable/ic_baseline_menu_24"
-                    app:navigationIconTint="@color/md_theme_light_primary"
-                    app:title="@string/app_name"
-                    app:titleTextColor="@color/md_theme_light_primary" />
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                app:menu="@menu/chat_menu"
+                app:navigationIcon="@drawable/ic_baseline_menu_24"
+                app:navigationIconTint="@color/md_theme_light_primary"
+                app:title="@string/app_name" />
 
-            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
 
-        </com.google.android.material.appbar.AppBarLayout>
-
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecyclerViewChat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/sendMessageBar"
         android:fadeScrollbars="true"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
         app:stackFromEnd="true"
         tools:itemCount="1"
         tools:listitem="@layout/messages">
 
     </androidx.recyclerview.widget.RecyclerView>
 
+
     <RelativeLayout
         android:id="@+id/sendMessageBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
         android:layout_marginBottom="20dp">
 
         <com.google.android.material.textfield.TextInputLayout
@@ -96,4 +89,4 @@
     </RelativeLayout>
 
 
-</RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
