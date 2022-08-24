@@ -31,7 +31,6 @@ class LogInActivity : AppCompatActivity() {
         binding.textviewForgotPassword.setOnClickListener {
             val intent = Intent(this, PasswordResetActivity::class.java)
             startActivity(intent)
-            finish()
         }
 
         //sign in user when button is tapped

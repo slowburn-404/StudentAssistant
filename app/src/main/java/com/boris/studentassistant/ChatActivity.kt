@@ -46,8 +46,9 @@ class ChatActivity : AppCompatActivity() {
             super.onCreate(savedInstanceState)
             binding = ActivityChatBinding.inflate(layoutInflater)
             setContentView(binding.root)
+            setSupportActionBar(binding.chatToolbar)
 
-            supportActionBar?.show()
+            binding.chatToolbar.setTitle(R.string.app_name)
 
             //initialize firebase
             sAuth = FirebaseAuth.getInstance()
@@ -57,7 +58,7 @@ class ChatActivity : AppCompatActivity() {
             binding.RecyclerViewChat.adapter = messageAdapter
 
             //update list and call dialogflow
-            binding.floatingActionButtonSendMessage.setOnClickListener {
+            binding.textInputLayoutTypeMessage.setEndIconOnClickListener {
                 val message = binding.textInputEditTextTypeMessage.text.toString().trim()
 
                 if(message.isNotEmpty()){

@@ -52,5 +52,8 @@
     <string name="reminders_title">Reminders</string>
     <string name="notes_title">Notes</string>
     <string name="assignments_title">Assignments</string>
+    <!-- scroll view behaviour for coordinator layout -->
+    <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+
 
 </resources>

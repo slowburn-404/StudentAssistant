@@ -7,340 +7,64 @@
     android:fillViewport="true"
     tools:context=".studentDashboard.DashboardActivity">
 
-            <com.google.android.material.appbar.AppBarLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fitsSystemWindows="true"
-                android:backgroundTint="@android:color/white"
-                app:liftOnScroll="true">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:liftOnScrollTargetViewId="@id/RecyclerViewDashboard"
+        app:liftOnScroll="true">
 
-                <com.google.android.material.appbar.CollapsingToolbarLayout
-                    style="?attr/collapsingToolbarLayoutMediumStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="?attr/collapsingToolbarLayoutMediumSize"
-                    app:contentScrim="?attr/colorPrimary"
-                    app:expandedTitleGravity="bottom"
-                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
-                    app:layout_collapseMode="pin">
-
-                    <com.google.android.material.appbar.MaterialToolbar
-                        android:id="@+id/dashboard_toolbar"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@android:color/transparent"
-                        android:elevation="0dp"
-                        app:layout_collapseMode="pin"
-                        app:layout_scrollFlags="scroll|enterAlways|snap"
-                        app:navigationIcon="@drawable/ic_baseline_menu_24"
-                        app:navigationIconTint="@color/md_theme_light_primary"
-                        app:title="@string/app_name"
-                        app:titleTextColor="@color/md_theme_light_primary" />
-
-                </com.google.android.material.appbar.CollapsingToolbarLayout>
-
-            </com.google.android.material.appbar.AppBarLayout>
-
-        <androidx.core.widget.NestedScrollView
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            style="?attr/collapsingToolbarLayoutMediumStyle"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbars="none"
-            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+            android:layout_height="?attr/collapsingToolbarLayoutMediumSize"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleGravity="bottom"
+            app:layout_collapseMode="pin"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-           <LinearLayout
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="fitEnd"
+                android:src="@drawable/ic_dashboard" />
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/dashboard_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="5dp">
+                android:elevation="0dp"
+                android:layout_marginTop="5dp"
+                app:menu="@menu/chat_menu"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                app:navigationIcon="@drawable/ic_baseline_menu_24"
+                app:navigationIconTint="@color/md_theme_light_primary"/>
 
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/announcements_card"
-                    style="?attr/materialCardViewElevatedStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    app:cardPreventCornerOverlap="false">
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="16dp">
+    </com.google.android.material.appbar.AppBarLayout>
 
-                        <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/ic_sent" />
-                        <!-- Title, secondary and supporting text -->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:padding="16dp">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerViewDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="true"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:stackFromEnd="true"
+        tools:listitem="@layout/dashboard_card">
 
-                            <TextView
-                                android:id="@+id/announcements_title"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Announcements"
-                                android:textAppearance="?attr/textAppearanceTitleMedium" />
-
-                            <TextView
-                                android:id="@+id/course_title"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:text="Course Title"
-                                android:textAppearance="?attr/textAppearanceBodyMedium"
-                                android:textColor="?android:attr/textColorSecondary" />
-
-                            <TextView
-                                android:id="@+id/description"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="16dp"
-                                android:text="@string/place_holder"
-                                android:textAppearance="?attr/textAppearanceBodyMedium"
-                                android:textColor="?android:attr/textColorSecondary" />
-                            <!-- Buttons -->
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="0dp"
-                                android:orientation="horizontal">
-
-                                <com.google.android.material.button.MaterialButton
-                                    style="?attr/borderlessButtonStyle"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Download" />
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/reminders_card"
-                    style="?attr/materialCardViewElevatedStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    app:cardPreventCornerOverlap="false">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="16dp">
-
-                            <ImageView
-                                android:layout_width="150dp"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/ic_sent" />
-                            <!-- Title, secondary and supporting text -->
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:padding="16dp">
-
-                                <TextView
-                                    android:id="@+id/reminders_title"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Reminders"
-                                    android:textAppearance="?attr/textAppearanceTitleMedium" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="8dp"
-                                    android:text="Course Title"
-                                    android:textAppearance="?attr/textAppearanceBodyMedium"
-                                    android:textColor="?android:attr/textColorSecondary" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="16dp"
-                                    android:text="@string/place_holder"
-                                    android:textAppearance="?attr/textAppearanceBodyMedium"
-                                    android:textColor="?android:attr/textColorSecondary" />
-
-                            </LinearLayout>
-
-                        </LinearLayout>
-                    </LinearLayout>
-
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/notes_card"
-                    style="?attr/materialCardViewElevatedStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    app:cardPreventCornerOverlap="false">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="16dp">
-
-                            <ImageView
-                                android:layout_width="150dp"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/ic_sent" />
-                            <!-- Title, secondary and supporting text -->
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:padding="16dp">
-
-                                <TextView
-                                    android:id="@+id/notes_title"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Notes"
-                                    android:textAppearance="?attr/textAppearanceTitleMedium" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="8dp"
-                                    android:text="Course Title"
-                                    android:textAppearance="?attr/textAppearanceBodyMedium"
-                                    android:textColor="?android:attr/textColorSecondary" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="16dp"
-                                    android:text="@string/place_holder"
-                                    android:textAppearance="?attr/textAppearanceBodyMedium"
-                                    android:textColor="?android:attr/textColorSecondary" />
-                                <!-- Buttons -->
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="0dp"
-                                    android:orientation="horizontal">
-
-                                    <com.google.android.material.button.MaterialButton
-                                        style="?attr/borderlessButtonStyle"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="Download" />
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/assignments_card"
-                    style="?attr/materialCardViewElevatedStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    app:cardPreventCornerOverlap="false">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="16dp">
-
-                            <ImageView
-                                android:layout_width="150dp"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/ic_sent" />
-                            <!-- Title, secondary and supporting text -->
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:padding="16dp">
-
-                                <TextView
-                                    android:id="@+id/assignments_title"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Assignments"
-                                    android:textAppearance="?attr/textAppearanceTitleMedium" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="8dp"
-                                    android:text="Course Title"
-                                    android:textAppearance="?attr/textAppearanceBodyMedium"
-                                    android:textColor="?android:attr/textColorSecondary" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="16dp"
-                                    android:text="@string/place_holder"
-                                    android:textAppearance="?attr/textAppearanceBodyMedium"
-                                    android:textColor="?android:attr/textColorSecondary" />
-                                <!-- Buttons -->
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="0dp"
-                                    android:orientation="horizontal">
-
-                                    <com.google.android.material.button.MaterialButton
-                                        style="?attr/borderlessButtonStyle"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="Download" />
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-
-                </com.google.android.material.card.MaterialCardView>
-
-            </LinearLayout>
-        </androidx.core.widget.NestedScrollView>
+    </androidx.recyclerview.widget.RecyclerView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/dashboard_floatingactionbutton"
         style="?attr/floatingActionButtonLargeStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
         android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
         app:backgroundTint="@color/md_theme_light_primary"
-        app:fabCustomSize="60dp"
-        app:srcCompat="@drawable/ic_baseline_chat_bubble_24"/>
+        app:fabCustomSize="65dp"
+        app:srcCompat="@drawable/ic_baseline_chat_bubble_24" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

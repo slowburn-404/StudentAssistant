@@ -15,6 +15,7 @@ class DashboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setSupportActionBar(binding.dashboardToolbar)
 
         //
         binding.dashboardToolbar.setTitle(R.string.app_name)
