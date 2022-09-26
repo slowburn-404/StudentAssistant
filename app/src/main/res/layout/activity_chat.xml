@@ -4,50 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
+    android:fitsSystemWindows="true"
     tools:context=".ChatActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/dashboard_AppBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:liftOnScroll="true"
-        app:liftOnScrollTargetViewId="@id/RecyclerViewChat">
-
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            style="?attr/collapsingToolbarLayoutMediumStyle"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/collapsingToolbarLayoutMediumSize"
-            app:expandedTitleGravity="bottom"
-            app:layout_collapseMode="pin"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
-
+        android:fitsSystemWindows="true"
+        app:liftOnScroll="true">
             <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/chat_toolbar"
+                android:id="@+id/chat_TopAppBar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="?attr/actionBarSize"
                 android:elevation="0dp"
-                android:layout_marginTop="5dp"
-                app:layout_collapseMode="pin"
-                app:layout_scrollFlags="scroll|enterAlways|snap"
+                android:background="@android:color/transparent"
+                app:title="@string/app_name"
                 app:menu="@menu/chat_menu"
                 app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
                 app:navigationIconTint="@color/md_theme_light_primary" />
 
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecyclerViewChat"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:fadeScrollbars="true"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:stackFromEnd="true"
-        tools:itemCount="1"
+        app:layout_dodgeInsetEdges="bottom"
         tools:listitem="@layout/messages">
 
     </androidx.recyclerview.widget.RecyclerView>
@@ -59,7 +48,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:hint="@string/type_message"
-        android:layout_margin="12dp"
+        android:layout_margin="10dp"
+        app:layout_insetEdge="bottom"
         app:boxCornerRadiusBottomEnd="50dp"
         app:boxCornerRadiusBottomStart="50dp"
         app:boxCornerRadiusTopEnd="50dp"

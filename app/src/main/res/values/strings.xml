@@ -54,6 +54,9 @@
     <string name="assignments_title">Assignments</string>
     <!-- scroll view behaviour for coordinator layout -->
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+    <!-- Get in touch with the developer-->
+    <string name="contact">Get in touch with the developer:</string>
+    <string name="dev_email">borisochola32@gmail.com</string>
 
 
 </resources>

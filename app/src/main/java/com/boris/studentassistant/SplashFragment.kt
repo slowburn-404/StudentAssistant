@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.RelativeLayout
+import androidx.core.view.WindowCompat
 import androidx.navigation.fragment.findNavController
 import com.boris.studentassistant.databinding.FragmentSplashBinding
 import com.boris.studentassistant.studentDashboard.DashboardActivity
@@ -28,7 +29,6 @@ class SplashFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): RelativeLayout {
-
         Handler(Looper.getMainLooper()).postDelayed({
             sAuth = FirebaseAuth.getInstance()
 

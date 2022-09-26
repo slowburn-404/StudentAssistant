@@ -5,14 +5,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
 import android.widget.Toast
+import androidx.core.view.WindowCompat
 import com.boris.studentassistant.adapters.MessageAdapter
 import com.boris.studentassistant.databinding.ActivityChatBinding
 import com.boris.studentassistant.logins.LogInActivity
 import com.boris.studentassistant.models.Message
+//import com.boris.studentassistant.studentDashboard.DashboardActivity
 import com.google.api.gax.core.FixedCredentialsProvider
 import com.google.auth.oauth2.GoogleCredentials
 import com.google.auth.oauth2.ServiceAccountCredentials
@@ -25,6 +24,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.util.*
 import kotlin.collections.ArrayList
+//import kotlin.system.exitProcess
 
 
 class ChatActivity : AppCompatActivity() {
@@ -46,9 +46,31 @@ class ChatActivity : AppCompatActivity() {
             super.onCreate(savedInstanceState)
             binding = ActivityChatBinding.inflate(layoutInflater)
             setContentView(binding.root)
-            setSupportActionBar(binding.chatToolbar)
-
-            binding.chatToolbar.setTitle(R.string.app_name)
+            //set app to fullscreen
+            WindowCompat.setDecorFitsSystemWindows(window, false)
+            //navigation icon press
+            binding.chatTopAppBar.setNavigationOnClickListener {
+                finish()
+            }
+            //kebab menu
+            binding.chatTopAppBar.setOnMenuItemClickListener { menuitem ->
+                when(menuitem.itemId){
+                    R.id.log_out -> {
+                        sAuth.signOut()
+                        val intent = Intent(this, LogInActivity::class.java)
+                        finishAffinity()
+                        startActivity(intent)
+                        true
+                    }
+                    //kill app
+                    R.id.exit_app -> {
+                        finishAffinity()
+                        //exitProcess(0)
+                        true
+                    }
+                    else -> false
+                }
+            }
 
             //initialize firebase
             sAuth = FirebaseAuth.getInstance()
@@ -131,32 +153,4 @@ class ChatActivity : AppCompatActivity() {
             Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
         }
     }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.chat_menu, menu)
-        return super.onCreateOptionsMenu(menu)
-    }
-
-    //kebab menu
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when(item.itemId) {
-         R.id.log_out -> {
-            //log out user
-             sAuth.signOut()
-             val intent = Intent(this, LogInActivity::class.java)
-             finish()
-             startActivity(intent)
-             true
-         }
-            //exit app
-            R.id.exit_app -> {
-                finish()
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
-
-
 }

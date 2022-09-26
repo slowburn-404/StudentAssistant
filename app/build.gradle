@@ -29,12 +29,13 @@ android {
         mavenCentral()
     }
     namespace 'com.boris.studentassistant'
-    lintOptions{
-        abortOnError false
+    packagingOptions {
+        resources {
+            excludes += ['META-INF/INDEX.LIST', 'META-INF/DEPENDENCIES']
+        }
     }
-    packagingOptions{
-        exclude 'META-INF/INDEX.LIST'
-        exclude 'META-INF/DEPENDENCIES'
+    lint {
+        abortOnError false
     }
 }
 
@@ -77,6 +78,10 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1")
     //dotsindicator
     implementation("com.tbuonomo:dotsindicator:4.3")
+    //circle imageview
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    //drawerlayout
+    implementation("androidx.drawerlayout:drawerlayout:1.1.1")
 
 
 }
